@@ -20,6 +20,7 @@ router.get('/register',(req,res)=>res.render('register'));
 
 // Register Handle
 router.post('/register',(req,res)=>{
+    console.log(req); 
     //body parser bish ihot kol champ fi var
     const {name,email,password,password2}=req.body
     //tab intaa errors
@@ -127,9 +128,9 @@ router.get('/logout',(req,res)=>{
     router.get('/delete/:id', (req, res) => {
        
        //mahouch 9aade ifasakh mil bd even tho ma5arajli hata erreur
-        console.log(req.params.id);
-        console.log(_id);
-        user.findByIdAndRemove({_id:ObjectId(req.params.id)}, function(err){
+        console.log("id"+req.params.id);
+       // console.log(_id);
+        user.findByIdAndRemove(req.params.id, function(err){
             if (!err) {
             req.flash('success_msg','You adeleted your account');
             res.redirect('/user/register');

@@ -3,4 +3,4 @@
 <p class="lead mb-3">Welcome <%= user.name %>  </p>
 <a href="/user/logout" class="btn btn-secondary">Logout</a>
 
-<a href="/user/delete/{{this._id}}"  onclick="return confirm('Are you sure to delete this record ?')" class="btn btn-danger">Delete Account</a></div>
+<a href="/user/delete/<%=user._id%>"  onclick="return confirm('Are you sure to delete this record ?')" class="btn btn-danger">Delete Account</a></div>

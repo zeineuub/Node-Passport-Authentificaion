@@ -1,0 +1,6 @@
+<div class="container" >
+<h1 class="mt-4">Dashboard</h1>
+<p class="lead mb-3">Welcome <%= user.name %>  </p>
+<a href="/user/logout" class="btn btn-secondary">Logout</a>
+
+<a href="/user/delete/{{this._id}}"  onclick="return confirm('Are you sure to delete this record ?')" class="btn btn-danger">Delete Account</a></div>
